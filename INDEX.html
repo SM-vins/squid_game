@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video</title>
+    <link rel="stylesheet" href="./CSS/home.css">
+    
+</head>
+<body>
+    <video id="myVideo">
+        <source src="./music/intro.mp4" type="video/mp4">
+    </video>
+
+    <button id="skipButton" onclick="skipVideo()">Skip</button>
+    
+        <button id="startButton" onclick="startVideo()">Start</button>
+    
+
+    <script >
+
+        initializePopups();
+        initializeRegistrationPopup();
+   
+        // Function to skip the video and hide the start button
+        function skipVideo() {
+            var video = document.getElementById("myVideo");
+            var skipButton = document.getElementById("skipButton");
+            var startButton = document.getElementById("startButton");
+        
+            // Skip the video
+            video.pause();
+            video.currentTime = video.duration;
+        
+            // Hide both the skip button and the start button
+            skipButton.style.display = "none";
+            startButton.style.display = "none";
+        
+            // Add a delay using setTimeout to allow time for the video to pause
+            setTimeout(function() {
+                // 
+                window.location.href = "./html/home.html";
+            }, 1500); //  (1.5 seconds) delay before navigating
+        }
+        
+        // Function to toggle video play/pause
+        function startVideo() {
+            // Get references to the video element and the start button
+            var video = document.getElementById('myVideo');
+            var startButton = document.getElementById('startButton');
+        
+            // Start the video
+            video.play();
+        
+            // Hide the button
+            startButton.style.display = 'none';
+        }
+        
+        
+        </script>
+</body>
+</html>
