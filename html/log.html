@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="../CSS/home.css">
+
+
+</head>
+<body>
+ 
+
+    <div class="blur-nav">
+        <a href="classic.html">PLAY</a>
+        <a class="active" href="log.html">LOGIN</a>
+        <a href="score.html">RANKING</a>
+        <a href="setting_page.html">SETTING</a>
+        <a href="exit_page.html" class="e-button" >EXIT</a>
+    </div>
+    <img src="../image/bg.jpg" class="exit-img">
+    <div class="login">
+        <form id="login-form" >
+    <!-- Login Form -->
+    <div id="loginForm">
+        <h1>Login</h1>
+        
+        
+        <div class="input-container">
+            <label for="email">Username:</label>
+            <input type="text" id="loginUsername" placeholder="Username" required>
+        </div>
+        <div class="input-container">
+            <label for="password">Password:</label>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+        </div>
+        <div class="l-button">
+                
+        <button onclick="login()">Login</button>
+        <button onclick="logout()">Logout</button>
+      
+    </div>
+           <br>
+         
+           <a onclick="showRegister()">Don't have an Account? Register here</a>
+           <br>
+           <br>
+           <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
+
+       
+</form>
+</div>
+
+   
+
+<form id="registerForm" style="display:none;">
+    <h1>Register</h1>
+    <div class="input-container">
+        <label for="register-name">Username:</label>
+    <input type="text" id="registerUsername" placeholder="Username" required>
+    <label for="register-email">Email:</label>
+    <input type="email" id="registerEmail" placeholder="Email" required>
+    <label for ="register-password" >Phone Number:</label>
+    <input type="tel" id="registerPhone" placeholder="Contact Number" required pattern="[0-9]{10}">
+    <label for ="register-password" >Password:</label>
+    <input type="password" id="registerPassword" placeholder="Password" required>
+    <label for ="register-password" >Confirm Password:</label>
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+</div>
+  
+<br>   
+    <button onclick="register()">Register</button>
+    <button id="homebtn" onclick="gotologinpage()">back</button>
+</form>
+
+<form id="forgotPasswordForm" style="display:none;">
+    <h1>Forgot Password</h1>
+    <div class="input-container">
+        <label for="register-email">Enter Your Email:</label>
+    <input type="email" id="forgotEmail" placeholder="Enter your email" required>
+   <br>
+   <br>
+    <button onclick="resetPassword()">Reset Password</button>
+    <button id="homebtn" onclick="gotologinpage()">back</button>
+</div>
+</form>
+
+
+   
+</div>
+<audio id="bg-music" loop>
+    <source src="../music/audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+    <script src="../javascript/game.js">
+        
+    </script>
+       <div class="bottom-nav">
+        <a href="contactus.html" >Contact us</a>
+       
+        <a href="info.html">Info</a>
+    </div>
+</body>
+</html>

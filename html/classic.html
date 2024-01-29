@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Squid Game</title>
+    <link rel="stylesheet" href="../CSS/home.css">
+   
+</head>
+<body>
+
+
+    <img src="../image/bg.jpg" class="con-img">
+    <div class="overlay">
+        <div class="countdown-display">3</div>
+    </div>
+  
+
+    <div class="box-container">
+       
+        <div class="box">
+            <div class="game-area">
+                <button class="start-button">START</button>
+    
+                <!-- Couple 1: Squares 1 and 6 -->
+                <div class="square-couple">
+                    <div class="square" id="square1"></div>
+                    <div class="separator-line"></div>
+                    <div class="square" id="square6"></div>
+                </div>
+    
+                <!-- Couple 2: Squares 2 and 7 -->
+                <div class="square-couple">
+                    <div class="square" id="square2"></div>
+                    <div class="separator-line"></div>
+                    <div class="square" id="square7"></div>
+                </div>
+    
+                <!-- Couple 3: Squares 3 and 8 -->
+                <div class="square-couple">
+                    <div class="square" id="square3"></div>
+                    <div class="separator-line"></div>
+                    <div class="square" id="square8"></div>
+                </div>
+    
+                <!-- Couple 4: Squares 4 and 9 -->
+                <div class="square-couple">
+                    <div class="square" id="square4"></div>
+                    <div class="separator-line"></div>
+                    <div class="square" id="square9"></div>
+                </div>
+    
+                <!-- Couple 5: Squares 5 and 10 -->
+                <div class="square-couple">
+                    <div class="square" id="square5"></div>
+                    <div class="separator-line"></div>
+                    <div class="square" id="square10"></div>
+                </div>
+    
+                <button class="end-button">END</button>
+                
+                <button class="restart" onclick="restartGame()">Restart Game</button>
+                <button class="exit_game" onclick="exitGame()">Exit Game</button>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="score-display">Score: <span id="score">0</span></div>
+    <button id="hint-button" class="hint-button" onclick="showHint()">Use Hint (3)</button>
+    <div class="timer-display">Time Left: <span id="timer">60</span> </div>
+
+
+
+    <div id="game-over-overlay" class="game-over-overlay">
+        <p id="game-over-text" class="game-over-text">Game Over</p>
+        <img id="game-over-gif" src="https://i.makeagif.com/media/10-17-2021/PwSCS3.gif" style="display:none;"> 
+    </div>
+
+    <div id="return-box" class="return-box" style="display: none;">
+        <h2>Game Over</h2>
+        <p id="final-score">Score: <span id="final-score-value">0</span></p>
+        <p id="time-taken">Time Taken: 0 seconds</p> <!-- Time taken element -->
+        <button class="re_game" onclick="restartGame()">Restart Game</button>
+        <button class="sc_game" onclick="sc()">Score Board</button>
+        <button class="ex_game" onclick="exitGame()">Exit Game</button>
+    </div>
+    
+    <div id="congratulations-box" class="congratulations-box" style="display: none;">
+        <h2>Congratulations!</h2>
+        <p id="final-score-congrats">Score: <span id="final-score-value-congrats">0</span></p>
+        <p id="time-taken-congrats">Time Taken: 0 seconds</p>
+        <button class="re_game" onclick="restartGame()">Restart Game</button>
+        <button class="sc_game" onclick="sc()">Score Board</button>
+       <button class="ex_game" onclick="exitGame()">Exit Game</button>
+
+    </div>
+    <div class="bottom-nav">
+        <a href="contactus.html" >Contact us</a>
+       <a href="HTP.html">How to Play</a>
+        <a href="info.html">Info</a>
+    </div>
+
+<script src="../javascript/game.js"></script>
+
+</body>
+</html>

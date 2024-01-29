@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Scores</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <style>
+      
+
+
+
+      
+    </style>
+</head>
+<body>
+    <div class="blur-nav">
+        
+        <a href="classic.html">PLAY</a>
+        <a href="log.html">LOGIN</a>
+        <a class="active" href="score.html">RANKING</a>
+        <a href="setting_page.html">SETTING</a>
+        <a href="exit_page.html" class="e-button" >EXIT</a>
+        </div>
+        <img src="../image/bg.jpg" class="exit-img">
+        
+        <div class="leaderboard">
+            <header>
+              <h1>Leader Board</h1>
+              <img src="../image/RANK.webp" alt="">
+              <nav>
+                <button id="yourScoreBtn">Your Score</button>
+                <button id="globalScoreBtn">Global Score</button>
+                <button id="homebtn" onclick="goToHomePage()">Home</button>
+
+            </nav>
+            </header>
+
+   
+
+    <div id="yourScores" style="display: block;">
+        <div class="score-table-wrapper">
+        <table id="userScoresTable">
+            <tr>
+                <th>Score</th>
+                <th>Time Taken</th>
+            </tr>
+            <!-- User scores will be inserted here -->
+        </table>
+    </div>
+</div>
+ 
+    <div id="globalScores" style="display: none;">
+        <div class="score-table-wrapper">
+        <table id="globalScoresTable">  
+            <tr>
+                <th class="user-column">User</th>
+                <th class="score-column">Score</th>
+                <th class="time-column">Time Taken</th>
+            </tr>
+            <!-- Global high scores will be inserted here -->
+        </table>
+    </div>
+    </div>
+</div>
+<audio id="bg-music" loop>
+    <source src="../music/audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<div class="bottom-nav">
+    <a href="contactus.html" >Contact us</a>
+   
+    <a href="info.html">Info</a>
+</div>
+    <script src="../javascript/game.js"></script>
+</body>
+</html>
