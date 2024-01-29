@@ -1,0 +1,1332 @@
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*----------------------------------------------------navigations bar--------------------------------------------------------------------------------------------------------------*/
+/* Styles for the home page navigation bar */
+.topnav {
+  overflow: hidden;
+  background: #000000;
+  
+}
+
+/* Float navigation links left */
+.topnav a {
+  float: left;
+ 
+  /* Set text color, font weight, text align, and padding */
+  color: #f2f2f2;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 18px;
+ 
+  /* Remove text decoration, set font size, and disable word wrapping */
+  text-decoration: none;
+  font-size: 20px;
+  white-space: nowrap;
+ }
+
+.topnav a:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 8px;
+}
+
+.topnav a.active {
+  background-color: rgb(255, 254, 254) 255, 255, 0.443;
+  color: rgba(0, 47, 255, 0.727);
+  border-radius: 8px;
+  
+}
+/* for the exit page navigation*/
+.exit{
+  overflow: hidden;
+  background-color:#000000 ;
+  filter: blur(3px);
+}
+.exit a {
+  float: left;
+  color: #f2f2f2;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+.exit a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/*for the blur navigaion bar use in multipal pages */
+.blur-nav{
+  overflow: hidden;
+  background-color:#000000 ;
+  filter: blur(0.1px);
+}
+.blur-nav a {
+  float: left;
+  color: #f2f2f2;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+
+.blur-nav a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.blur-nav a.active {
+  background-color: rgb(255, 254, 254) 255, 255, 0.443;
+  color: rgb(255, 0, 0);
+  border-radius: 8px;
+}
+
+/*bottom navigation*/
+.bottom-nav {
+  background-color: #000000; /* Background color */
+  position: fixed; /* Fix the navigation bar at the bottom of the viewport */
+  width: 100%; /* 100% width of the viewport */
+  text-align: left; /* Center-align the links */
+  bottom: 0; /* Stick to the bottom of the viewport */
+  height: 45px;
+}
+
+/* Style the links in the bottom navigation bar */
+.bottom-nav a {
+  display: inline-block; /* Display links in a row */
+  color: rgb(255, 255, 255); /* Text color */
+  font-weight: bold;
+  text-decoration: none; /* Remove underline from links */
+  transition: .10s ease all; /* Smooth transitions for hover effect */
+  padding: 15px 15px; /* Padding for each link */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 20px;
+
+}
+
+/* Style links on hover */
+.bottom-nav a:hover {
+  background-color: #ffffff; /* Background color on hover */
+  color: #000000;
+}
+
+
+.bottom-nav a.active {
+  background-color: rgb(255, 255, 255) 255, 255, 0.443;
+  color: rgb(255, 0, 0);
+  border-radius: 8px;
+}
+
+
+/*---------------------------------------------------------------------------------------------------home_page--------------------------------------------------------------------------------*/
+
+/* for the instruction box and instruction text */
+.instructions {
+  position: absolute;
+  width: 96%;
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: hsla(0, 100%, 100%, 0.242);
+  font-family: "Roboto", sans-serif; 
+  color: #000000;
+}
+
+/* for headings and loader animation */
+.instructions h3 {
+  font-size: 2vw;
+  letter-spacing: 0.1em;
+}
+
+.loader span {
+  color: #faebd7;
+  text-shadow: 0 0 0 #83838310;
+  animation: loading 1s ease-in-out infinite alternate; 
+}
+/* define keyframes for loading animation */
+@keyframes loading {
+  to {
+     /* change text-shadow to 20px right and 70px color */
+     text-shadow: 20px 0 70px #ff0202;
+     /* change text color to dark */
+     color: #030303;
+  }
+ }
+
+/* Loader animation delays for spans */
+.loader span:nth-child(n + 2) {
+  animation-delay: 0.1s * (n - 1);
+}
+
+/* for the intro_page Container styles and additional text styles  */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+/* intro_page  font*/
+.instructions p {
+
+  font-size: 20px;
+  font-style: italic;
+  text-align: left;
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: #faebd7;
+  text-shadow: 0 0 90 #00000010;
+  animation: loading 3s ease-in-out infinite alternate; 
+}
+
+
+
+
+/*------------------------------------------------------------------------------exit_page-----------------------------------------------------------------------------------------------------*/
+/*animation for the outside box*/
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.confirm {
+  /* Centered position */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
+  /* Size and border */
+  width: 80%;
+  min-width: 280px;
+  max-width: 500px;
+  height: auto;
+  background: #12121271;
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+  border: 2px solid rgb(255, 255, 255);
+ 
+  /* Animation */
+  animation: fade 1s ease 1 forwards;
+ }
+.confirm h1 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 1.5rem 1rem 0.5rem;
+  color: #ffffff;
+}
+/*alert text editing */
+.confirm p {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0 2rem 4.5rem;
+  color: #ffffff;
+}
+.confirm a {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+ text-decoration-line: none;
+  text-align: center;
+  font-weight: bold;
+  
+}
+.confirm a:nth-of-type(1) {
+  /* Border for the first anchor element */
+  border-top: 1px solid #B4B4B4;
+  border-right: 1px solid #B4B4B4;
+  left: 0;
+  /* Rounded corner for the first anchor element */
+  border-radius: 0 0 0 10px;
+ }
+.confirm a:nth-of-type(2) {
+  border-top: 1px solid #B4B4B4;
+  right: 0;
+  border-radius: 0 0 10px 0;
+}
+
+.confirm a:hover {
+  font-weight: bold;
+  background: #ffffff;
+  color: #000000;
+}
+.confirm a:active {
+  background: #000000;
+  color: #f2f2f2;
+}
+
+
+/*-----------------------------------------------------------------------------------setting_ page----------------------------------------------------------------------------------------------*/
+/*outside box control*/
+.setting {
+  
+    /* position in absolute units */
+    position: absolute;
+    /* position vertically and horizontally */
+    top: 50%;
+    left: 50%;
+    /* transform to center of screen */
+    transform: translate(-50%, -50%);
+
+    /* setting width */
+    width: 10%;
+    min-width: 28%;
+    max-width: 80%;
+
+    /* setting height */
+    height: 40%;
+    background: #12121271;
+    border-radius: 10px;
+
+    /* padding and margin */
+    padding: 0;
+    margin: 0;
+
+    /* border */
+    border: 2px solid rgb(255, 255, 255);
+
+    /* animation */
+    animation: fade 1s ease 1 forwards;
+  }
+
+  .setting h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1.5rem 0.5rem;
+    color: #ffffff;
+  }
+  .setting a{
+  background: rgb(0, 0, 0);
+  border: 1px solid #ffffff;
+  border-radius: 10%;
+    color: hsl(0, 0%, 100%);
+    height: 2rem;
+    font-size: medium;
+    width: 20%;
+    position: absolute;
+    bottom: auto;
+    cursor: pointer;
+   text-decoration-line: none;
+    text-align: center;
+    font-weight: bolder;
+    right: 30%;
+    top: 90%;
+    animation: fade 1s ease 1 forwards;
+  }
+  
+.setting p{
+ font-weight: bold;
+ font-family: 'Times New Roman', Times, serif;
+ font-size: large;
+text-align: center;
+
+color: #fff;
+
+}
+  .setting a:hover{
+  background-color: #f2f2f2;
+    color: #000000;
+    
+  }
+
+  /*for the audio and video */
+  .setting-option {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 110px;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    font-size: medium;
+}
+/*for the switch the button for on off*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #03fc2c;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+
+
+/*---------------------------------------------------------------------------------------intro_page-------------------------------------------------------------------------------------------*/
+    /* animation for the start and skip button */
+    @keyframes neonPulse {
+  0% { /* background black, box-shadow blue */
+    background-color: #1e1f1f;
+    box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+ }
+  50% { /* background black, box-shadow red */
+    background-color: #070707;
+    box-shadow: 0 0 20px rgba(255, 0, 38, 0.7);
+ }
+  100% { /* background blue, box-shadow blue */
+    background-color: #00ccff;
+    box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+ }
+}
+
+#startButton, #skipButton {
+  background-color: #1e1f1f; /* Set background color */
+ color: #fff; /* Set text color */
+ padding: 15px 30px; /* Set padding */
+ border: none; /* Remove border */
+ border-radius: 5px; /* Set border radius */
+ text-align: center; /* Center text */
+ text-decoration: none; /* Remove underline */
+ display: inline-block; /* Display as inline-block */
+ font-size: 16px; /* Set font size */
+ margin: 5px; /* Set margin */
+ cursor: pointer; /* Set cursor to pointer */
+ animation: neonPulse 2s infinite; /* Add animation */
+}
+
+#startButton:hover, #skipButton:hover {
+  background-color: #f8fdfe;
+  color: #000000;
+  animation: none;
+}
+
+#startButton {
+  position: absolute;
+  top: 85%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+}
+
+#skipButton {
+  position: absolute;
+  top: 93%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+}
+
+#myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+  
+}
+
+
+
+/*------------------------------------------------------------------login_page-----------------------------------------------------------------------------------------------------------*/
+/*contorl outside box */
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8%;
+  min-width: 28%;
+  max-width: 50%;
+  height: auto;
+  background: #12121257;
+  border-radius: 10px;
+  padding: 0px;
+  margin: 0;
+  border: 2px solid rgb(255, 255, 255);
+  animation: fade 1s ease 1 forwards;
+}
+
+.login a{
+
+color: #00ccff;
+font-weight: bold;
+font-size: medium;
+
+
+}
+.login a:hover{
+
+  color: #000000;
+  
+}
+
+form {
+
+  
+  border-radius: 5px;
+  text-align: center;
+}
+
+ 
+  .login h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1.5rem 0.5rem;
+    color: #ffffff;
+}
+
+.input-container {
+  margin-bottom: 10px;
+  color: white;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"]{
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.login button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+/*edit register box and when box open edit background*/
+.overlay {
+  /* Display property for overlay */
+  display: none;
+  /* Position property for overlay */
+  position: fixed;
+  /* Top and left positioning for overlay */
+  top: 0;
+  left: 0;
+  /* Width and height for overlay */
+  width: 100%;
+  height: 100%;
+  /* Background color for overlay */
+  background-color: #00000059;
+  /* Z-index for overlay */
+  z-index: 2;
+  /* Padding for overlay */
+  padding: 20px;
+  /* Border radius for overlay */
+  border-radius: 5px;
+  /* Box shadow for overlay */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.5);
+  /* Text alignment for overlay */
+  text-align: center;
+ }
+
+.l-button{
+  position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: #000;
+    right:0%;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 8px 2px;
+    transition-duration: 0.4s;
+ font-family:'Courier New', Courier, monospace
+
+}
+/*------------------------------------------------------------------------------------play_page------------------------------------------------------------------------------------------------*/
+
+/*play_page heding edit*/
+#mode-heading {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#gameMode {
+  font-size: 15px;
+}
+/*play_page-to managing outside box*/
+.play{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: auto;
+  background: #12121271;
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgb(255, 255, 255);
+  animation: fade 1s ease 1 forwards;
+}
+.play h1 {
+  text-align: center;
+  font-size: 1.2rem;
+  
+  color: #ffffff;
+}
+.play a {
+  background: transparent;
+  
+  color: #ffffff;
+  height: 2.3rem;
+  font-size: 1.2rem;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+ text-decoration-line: none;
+  text-align: center;
+  font-weight: bold;
+  
+}
+/*play_page -edititng buttons */
+.play a:nth-of-type(1) {
+  border-top: 1px solid #b4b4b4;
+  border-right: 3px solid #B4B4B4;
+  left: 0;
+  border-radius: 0 0 0 10px;
+}
+.play a:nth-of-type(2) {
+  border-top: 1px solid #B4B4B4;
+  border-left: 1px solid #B4B4B4;
+  right: 0;
+  border-radius: 0 0 10px 0;
+}
+
+.play a:hover {
+  font-weight: bold;
+  background: #ffffff;
+  color: #000000;
+}
+.play a:active {
+  background: #000000;
+  color: #000000;
+}
+/* play_page- dropdown */
+.drop select {
+  width: 50%;
+  padding: 10px;
+  border: 3px solid #fffefe;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #000000;
+  color: white;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* play_page - selected option from the dropdown */
+.drop select option:checked {
+  background-color: #3498db;
+  color: rgb(253, 253, 253);
+}
+
+
+.drop {
+  text-align: center;
+  margin: 10px 0px;
+}
+
+/* play_page - animation effect in the instruction  */
+#message {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #080808;
+  font-weight: bold;
+  animation: neon 1s alternate infinite;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: 0 0 5px #fdfcfc, 0 0 10px #fffbfb, 0 0 30px #fff9f9;
+  }
+  100% {
+    text-shadow: 0 0 5px #050505, 0 0 10px #fffcfc, 0 0 30px #0a0a0a;
+  }
+}
+
+
+
+/*-----------------------------------------------------------------------------------------img-class------------------------------------------------------------------------------------------*/
+
+
+/* Styles for the background image */
+.background-img {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 555px;
+}
+/*exit page img*/
+.exit-img {
+  
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 545px;
+    filter: blur(5px);
+  }
+  /* confirm page img */
+  .con-img{
+    background-size: cover ;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
+  }
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* for the exit button link*/
+.e-button {
+  position: absolute;
+  right: 1px;
+  display: inline-block;
+  padding: 14px 20px;
+  background-color: #000000;
+  color: #fff;
+  border: none;  
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.e-button:hover {
+  background-color: #f9f7f7;
+}
+
+/*-----------------------------------------------------------------------------scoreboard_page-------------------------------------------------------------------------------------------------*/
+
+/*for the manage the outside ranking box*/
+
+.leaderboard {
+ position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 25%;
+min-width: 25%;
+max-width: 80%;
+height: 80%;
+background: transparent;
+border-radius: 10px;
+font-family: sans-serif;
+animation: fade 1s ease 1 forwards;
+
+}
+header {
+  background-color: #eb1c1c;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 15rem;
+  position: relative;
+}
+.leaderboard h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+  position: absolute;
+  margin-left: 3rem;
+  top: 4rem;
+ 
+}
+
+/*navigation score classic and advance mode */
+a {
+  text-decoration: none;
+  color: inherit;
+  
+  display: inline-block;
+  
+
+}
+ 
+
+
+/*edit leader table */
+table {
+  background-color: #000000;
+  color: #999;
+  width: 100%;
+  border-collapse: collapse;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  overflow: hidden;
+}
+/*head of teable modes and times ect*/
+thead {
+  font-size: 0.75rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+tbody .nick {
+  color: white;
+  font-weight: bold;
+}
+
+.nick {
+  text-align: left;
+}
+
+/*dummy img*/
+img {
+  height: 15rem;
+  position: absolute;
+  bottom: 0;
+  right: .00000000001rem;
+}
+nav a + a {
+  margin-left: 1rem;
+} 
+nav {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.9rem;
+  background: linear-gradient(to bottom, transparent, transparent .2%, rgba(0, 0, 0, 0.5));
+}
+
+nav a {
+  padding-top: 12rem;
+  padding-bottom: 1rem;
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 0.9rem;
+}
+
+
+.leaderboard a.active {
+  border-bottom: 4px solid rgb(0, 140, 255);
+}
+
+nav a:first-child {
+  margin-left: 1rem;
+}
+
+.rk, .tm {
+  text-align: right;
+
+}
+
+.tm, .rk {
+  width: 8ch;
+}
+
+
+
+th {
+  padding: 0.35rem 1rem 1rem;
+  text-align: left;
+}
+
+td {
+  padding: 1rem 1rem;
+}
+
+tbody tr:nth-child(2n) {
+  background-color: #474747a2;
+}
+.score-table-wrapper {
+  max-height: 200px; /* Adjust as needed */
+  overflow-y: auto; /* Enables vertical scrolling */
+  margin-bottom: 20px; /* Optional spacing */
+  
+}
+/*----------------------------------------------------------------------------------------contact_us-------------------------------------------------------------------------------------------*/
+
+.contact {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10%;
+  min-width: 28%;
+  max-width: 80%;
+  height: 40%;
+  background:rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+  border: 2px solid rgb(255, 255, 255);
+  animation: fade 1s ease 1 forwards;
+}
+
+.contact h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1.5rem 0.5rem;
+  color: #ffffff;
+}
+
+.contact a{
+  background: rgb(0, 0, 0);
+border: 1px solid #ffffff;
+border-radius: 10%;
+  color: hsl(0, 0%, 100%);
+  height: 2rem;
+  font-size: medium;
+  width: 20%;
+  position: absolute;
+  bottom: auto;
+  cursor: pointer;
+ text-decoration-line: none;
+  text-align: center;
+  font-weight: bold;
+  right: 30%;
+  top: 90%;
+  animation: fade 1s ease 1 forwards;
+}
+.contact p{
+font-weight: bold;
+font-family: 'Times New Roman', Times, serif;
+font-size: large;
+text-align: center;
+
+color: #fff;
+
+}
+.contact a:hover{
+background-color: #f2f2f2;
+  color: #000000;
+  
+}
+
+/*------------------------------------------------------------------------------------------Info_page---------------------------------------------------------------------------------------*/
+
+.info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  min-width: 28%;
+  max-width: 100%;
+  height: 60%;
+  background:rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+  border: 2px solid rgb(255, 255, 255);
+  animation: fade 1s ease 1 forwards;
+}
+
+.info h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1.5rem 0.5rem;
+  color: #ffffff;
+}
+.info h3{
+
+  text-align: left;
+   font-size: large;
+   line-height: 1.6em;
+   letter-spacing: .07em;
+  color: #fff; 
+  font-family :'Times New Roman', Times, serif;
+  }
+
+
+
+
+.info a{
+  background: rgb(0, 0, 0);
+border: 1px solid #ffffff;
+border-radius: 10%;
+  color: hsl(0, 0%, 100%);
+  height: 2rem;
+  font-size: medium;
+  width: 20%;
+  position: absolute;
+  bottom: auto;
+  cursor: pointer;
+ text-decoration-line: none;
+  text-align: center;
+  font-weight: bolder;
+  right: 30%;
+  top: 90%;
+  animation: fade 1s ease 1 forwards;
+}
+.info p{
+font-weight: bold;
+font-family: 'Times New Roman', Times, serif;
+font-size: medium;
+text-align: left;
+text-transform: lowercase;
+color: #fff;
+
+}
+.info a:hover{
+background-color: #f2f2f2;
+  color: #000000;
+  
+}
+/* ---------------------------------------------------------------------------------game page------------------------------------------------------------------------------*/
+.box-container {
+  position: relative; /* Establishes this container as a flex container */
+  justify-content: center; /* Centers flex items along the main axis (horizontally) */
+  align-items: center; /* Centers flex items along the cross axis (vertically) */
+  height: 100vh; /* Sets the height of the container to the full viewport height */
+
+}
+      .game-area {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns based on your design */
+          grid-gap: 7px;
+          padding: 40px;
+          margin: 20px 50px;
+          color: #fff;
+          text-align: center;
+          position: relative;
+      }
+
+.start-button, .end-button {
+  writing-mode: vertical-lr; /* This will make the text vertical */
+  transform: rotate(180deg); /* This will flip the text so it's not upside-down */
+  position: absolute;
+  white-space: nowrap; /* Prevents the text from wrapping */
+  color: #fff; /* Text color set to white */
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: bold; /* Bold text */
+  text-shadow: 2px 2px #ff0000; /* Shadow color set to red */
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  backdrop-filter: blur(5px); /* Blur effect on the background */
+  padding: 10px; /* Add padding to make the background larger */
+  border-radius: 10px; /* Rounded corners */
+  border: none; /* Remove border */
+  outline: none; /* Remove focus outline */
+  cursor: pointer; /* Change mouse cursor on hover */
+}
+.restart, .score-display, .exit_game, .hint-button, .timer-display {   
+ 
+  position: absolute;
+  white-space: nowrap; /* Prevents the text from wrapping */
+  color: #fff; /* Text color set to white */
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: bold; /* Bold text */
+  text-shadow: 2px 2px #ff0000; /* Shadow color set to red */
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  backdrop-filter: blur(5px); /* Blur effect on the background */
+  padding: 10px; /* Add padding to make the background larger */
+  border-radius: 10px; /* Rounded corners */
+  border: none; /* Remove border */
+  outline: none; /* Remove focus outline */
+  cursor: pointer; /* Change mouse cursor on hover */
+}
+
+.timer-display{
+  left: 67%;
+  top: 14%;
+}
+.hint-button{
+  left:  20%;
+  top: 14%;;
+}
+.score-display{
+  left: 45%; /* Position to the right side */
+  top: 14%; /* Adjust as needed for exact positioning */
+}
+.start-button {
+  left: 20px; /* Position to the left side */
+  top: 60%; /* Adjust as needed for exact positioning */
+  transform-origin: left top;
+}
+
+.end-button {
+  left: 93%; /* Position to the right side */
+  top: 60%; /* Adjust as needed for exact positioning */
+  transform-origin: right top;
+}
+.restart{
+  left: 23%; /* Position to the right side */
+  top: 93%; /* Adjust as needed for exact positioning */
+}
+.exit_game{
+  left: 63%; /* Position to the right side */
+  top: 93%; /* Adjust as needed for exact positioning */
+
+}
+.separator-line {
+  height: 10px; /* Same as the square height, adjust as needed */
+  width: 1px; /* Adjust the width as needed */
+  background-color: #000; /* Color of the line */
+  margin: 0 5px; /* Space between the line and the squares */
+}
+.square.correct {
+  background-color: green; /* Background color for correct selection */
+  background-image: url('https://clipground.com/images/png-footprint-8.jpg');
+  background-size: cover; /* Cover the entire square with the image */
+  background-position: center; /* Center the image in the square */
+}
+
+
+.square.incorrect {
+  background-color: red;
+  background-image: url('https://www.shutterstock.com/image-vector/no-walking-running-vector-sign-260nw-1917699275.jpg'); 
+  background-size: cover;
+}
+
+     .square {
+          background-color:white; /* White squares */
+          height: 150px; /* Adjust height as needed */
+          width: 150px;
+        border-color: #fff;
+      }
+      .box {
+  background-color: #12121274;
+  position: relative; /* Positions the box out of the normal document flow */
+top: 80px; /* Aligns the box to the bottom of its positioned container */
+  left: 150px; /* Aligns the box to the left of its positioned container */
+  right: 40px; /* Ensures the box stretches across the full width of the container */
+  border: 2px solid #fff;
+  
+  height: 75%; /* Example height */
+  width: 75%;
+
+}
+.game-over-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ background-color: rgba(31, 30, 30, 0);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000; 
+}
+
+.game-over-text {
+  color: white;
+  font-size: 48px; 
+  text-align: center;
+  z-index: 7000;
+}
+
+#game-over-gif {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: 3002;
+}
+
+.overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.75);
+          display: none;
+          align-items: center;
+          justify-content: center;
+          z-index: 2000;
+      }
+      .countdown-display {
+          color: white;
+          font-size: 60px;
+          font-weight: bold;
+          text-align: center;
+      }
+
+      .return-box, .congratulations-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+  background-color: rgba(46, 46, 46, 0.5); /* Semi-transparent white */
+  border: 2px solid #ff0000; /* White border */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4000; /* Above everything else */
+}
+.return-box, .congratulations-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+}
+
+.return-box button, .congratulations-box button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 80%; /* Set a specific width */
+  display: block; /* Make each button a block element */
+}
+.return-box h2, .congratulations-box h2{
+  text-align: center;
+  font-size: 2rem;
+  margin: 1.5rem 0.5rem;
+  color: #ffffff;
+
+ }
+ .return-box p, .congratulations-box p{
+  text-align: center;
+  font-size: 1rem;
+  margin: 1.5rem 0.5rem;
+  color: #ffffff;
+
+ }
+
+
+.return-box button:hover, .congratulations-box button:hover {
+  background-color: #e60000;
+}
+
+.return-box .re_game,  .congratulations-box .re_game {
+  background-color: #000000; /* Green background for restart */
+  color: #fff;
+}
+
+.return-box .re_game:hover, .congratulations-box .re_game:hover
+{
+  background-color: #ffffff; /* Darker green on hover */
+  color: #000;
+  border:2px solid #000;
+}
+
+.return-box .ex_game,  .congratulations-box .ex_game {
+  background-color: #000000; /* Red background for exit */
+  color:#fff;
+
+}
+
+.return-box .ex_game:hover, .congratulations-box .ex_game:hover {
+  background-color: #ffffff; /* Darker red on hover */
+  color: #000;
+  border:2px solid #000;
+}
+.return-box .sc_game,  .congratulations-box .sc_game {
+  background-color: #000000; /* Red background for exit */
+  color:#fff;
+
+}
+
+.return-box .sc_game:hover, .congratulations-box .sc_game:hover {
+  background-color: #ffffff; /* Darker red on hover */
+  color: #000;
+  border:2px solid #000;
+}
+
+.player-score {
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 10px; /* Space above the buttons */
+  text-align: center;
+}
+.classic_bar {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes neonGlowGreen {
+  from { text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0; }
+  to { text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 15px #0f0; }
+}
+
+@keyframes neonGlowRed {
+  from { text-shadow: 0 0 10px #f00, 0 0 20px #f00, 0 0 30px #f00; }
+  to { text-shadow: 0 0 5px #f00, 0 0 10px #f00, 0 0 15px #f00; }
+}
+/*score animation when user use the hint rr */
+.score-animation {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: #0f0; /* Green color */
+  animation: fadeOut 2s ease-out, neonGlowGreen 1s ease-in-out infinite alternate;
+}
+
+.timer-animation {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: #f00; /* Red color */
+  animation: fadeOut 2s ease-out, neonGlowRed 1s ease-in-out infinite alternate;
+}
+
